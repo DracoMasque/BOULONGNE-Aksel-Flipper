@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6545471408105887580}
   - component: {fileID: 7093301827479028375}
   m_Layer: 6
-  m_Name: Padle left
+  m_Name: Padle Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
