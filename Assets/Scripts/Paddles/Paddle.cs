@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,12 +10,11 @@ public class Paddle : MonoBehaviour
     
     public HingeJoint hinge;
     
-    public KeyCode pressedKey = KeyCode.Space;
-    
     private JointSpring  jointSpring;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        hinge = GetComponent<HingeJoint>();
         jointSpring = hinge.spring;
     }
 
@@ -34,5 +35,7 @@ public class Paddle : MonoBehaviour
             jointSpring.targetPosition = originePos;
         }
         hinge.spring = jointSpring;
+        Debug.Log(hinge.spring);
     }
 }
+

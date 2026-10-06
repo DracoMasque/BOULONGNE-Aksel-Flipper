@@ -196,4 +196,3 @@ MonoBehaviour:
   targetPos: 75
   originePos: 0
   hinge: {fileID: 6545471408105887580}
-  pressedKey: 276
