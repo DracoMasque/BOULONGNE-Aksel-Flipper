@@ -144,8 +144,8 @@ MonoBehaviour:
   paddle: {fileID: 8963710653357055657}
   powerLevel: 0
   strenghtLevel1: 5
-  strenghtLevel2: 7.8
-  strenghtLevel3: 11.4
+  strenghtLevel2: 8
+  strenghtLevel3: 11
   strenght: 5
   point1: {fileID: 2397140558263890786}
   point2: {fileID: 3468690842160131181}

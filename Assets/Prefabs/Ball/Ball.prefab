@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3523387620002459039}
   - component: {fileID: 195508247131275240}
   - component: {fileID: 1774425144390761818}
+  - component: {fileID: 3698609003850433792}
   m_Layer: 3
   m_Name: Ball
   m_TagString: Ball
@@ -141,6 +142,19 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 56
   m_CollisionDetection: 2
+--- !u!114 &3698609003850433792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791334973863152767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45f8ba29d11e79e41ad74995686ad99b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RecupItem
+  propultionItems: []
 --- !u!1 &2794328439683717292
 GameObject:
   m_ObjectHideFlags: 0

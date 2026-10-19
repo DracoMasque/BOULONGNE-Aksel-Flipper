@@ -10,6 +10,7 @@ public class SelfPaddle : MonoBehaviour
     private Animation anim;
     private GameObject ball;
     private Rigidbody rb;
+    private RecupItem propulsionItems;
 
     [SerializeField] private GameObject paddle;
 
@@ -23,6 +24,7 @@ public class SelfPaddle : MonoBehaviour
     
     private bool timerLancer = false;
     private float timer = 0;
+    private bool canShoot = false;
 
     void Start()
     {
@@ -31,6 +33,7 @@ public class SelfPaddle : MonoBehaviour
         mousePos = InputSystem.actions["MousePos"];
         ball = GameObject.FindWithTag("Ball");
         rb = ball.GetComponent<Rigidbody>();
+        propulsionItems = ball.GetComponent<RecupItem>();
     }
 
     // Update is called once per frame
@@ -46,19 +49,26 @@ public class SelfPaddle : MonoBehaviour
     
     public void SelfPaddleAction(InputAction.CallbackContext ctx)
     {
-        if (ctx.started)
+        if (propulsionItems.propultionItems.Count > 0)
         {
-            Time.timeScale = 0.5f;
-            paddle.SetActive(true);
-            timerLancer = true;
+            if (ctx.started)
+            {
+                Time.timeScale = 0.5f;
+                paddle.SetActive(true);
+                timerLancer = true;
+                canShoot = true;
+                propulsionItems.propultionItems[^1].SetActive(true);
+                propulsionItems.propultionItems.RemoveAt(propulsionItems.propultionItems.Count-1);
+            }
         }
-        if (ctx.canceled)
+        if (ctx.canceled && canShoot)
         {
             anim.Play();
             Time.timeScale = 1;
             powerLevel = 0;
             timerLancer = false;
             timer = 0;
+            canShoot  = false;
         }
         
     }
