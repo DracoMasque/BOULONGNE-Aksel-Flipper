@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class Paddle : MonoBehaviour
 {
+    [SerializeField] private Tutorial tuto;
+    
     public float targetPos = 75;
     public float originePos;
     
@@ -35,7 +37,10 @@ public class Paddle : MonoBehaviour
             jointSpring.targetPosition = originePos;
         }
         hinge.spring = jointSpring;
-        Debug.Log(hinge.spring);
+        if (tuto != null)
+        {
+            tuto.PaddleInputTutoDone();
+        }
     }
 }
 

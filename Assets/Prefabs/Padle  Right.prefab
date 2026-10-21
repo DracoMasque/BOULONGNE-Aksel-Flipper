@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd317d6cba2d66f4b9462a30c4e2a47d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Paddle
-  targetPos: -75
+  tuto: {fileID: 0}
+  targetPos: -20
   originePos: 0
   hinge: {fileID: 3235881708322630321}
-  pressedKey: 275

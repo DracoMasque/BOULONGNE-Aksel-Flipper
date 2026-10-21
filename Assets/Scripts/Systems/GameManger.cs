@@ -7,31 +7,40 @@ public class GameManger : MonoBehaviour
     public GameObject ball;
     public TextMeshProUGUI lifeCountText;
     public Transform originePos;
+    private Tutorial tuto;
 
     void Start()
     {
+        tuto = gameObject.GetComponent<Tutorial>();
         RefreshLifeText();
     }
 
     public void LooseLife()
     {
         
-        if (lifeCount > 0)
+        if (lifeCount > 0 && !tuto.onGoing)
         {
             lifeCount--;
             RefreshLifeText();
+            SpawnBall();
+        }
+        else if (tuto.onGoing)
+        {
             SpawnBall();
         }
     }
     
     void SpawnBall()
     {
-        Instantiate(ball, originePos.position, transform.rotation);
+        ball.transform.position = originePos.position;
     }
     
     void RefreshLifeText()
     {
-        lifeCountText.text = "life : " + lifeCount;
+        if (lifeCountText != null)
+        {
+            lifeCountText.text = "life : " + lifeCount;
+        }
     }
     
 }

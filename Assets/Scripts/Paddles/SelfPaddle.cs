@@ -11,6 +11,7 @@ public class SelfPaddle : MonoBehaviour
     private GameObject ball;
     private Rigidbody rb;
     private RecupItem propulsionItems;
+    [SerializeField] private Tutorial tuto;
 
     [SerializeField] private GameObject paddle;
 
@@ -53,7 +54,7 @@ public class SelfPaddle : MonoBehaviour
         {
             if (ctx.started)
             {
-                Time.timeScale = 0.5f;
+                Time.timeScale = 0.3f;
                 paddle.SetActive(true);
                 timerLancer = true;
                 canShoot = true;
@@ -69,6 +70,10 @@ public class SelfPaddle : MonoBehaviour
             timerLancer = false;
             timer = 0;
             canShoot  = false;
+            if (tuto != null)
+            {
+                tuto.ItemTutorialDone();
+            }
         }
         
     }

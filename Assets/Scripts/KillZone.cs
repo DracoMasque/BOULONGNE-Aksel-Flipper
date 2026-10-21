@@ -6,7 +6,7 @@ public class KillZone : MonoBehaviour
 
     void Start()
     {
-        gameManager = GameObject.Find("GameManger").GetComponent<GameManger>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManger>();
     }
     void OnTriggerEnter(Collider collision)
     {
