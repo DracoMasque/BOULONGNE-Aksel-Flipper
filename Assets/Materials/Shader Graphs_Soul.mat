@@ -43,7 +43,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _DissolveSlider1: 0
-    - _DissolveSlider2: 0.315
+    - _DissolveSlider2: 0.339
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SmoothStep: 0.283

@@ -92,6 +92,17 @@
                 },
                 {
                     "name": "",
+                    "id": "4abcddaf-7f27-45cb-904e-8e56ba2a437f",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Paddle right",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "462a8a33-0656-41eb-8f20-61f99f70d5fb",
                     "path": "<Keyboard>/leftArrow",
                     "interactions": "",
@@ -105,6 +116,17 @@
                     "name": "",
                     "id": "7f598ffc-c2b8-4ac6-aeb0-3520726609db",
                     "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Paddle left",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e6442445-9190-4c5f-b4f0-815f63b40ad5",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

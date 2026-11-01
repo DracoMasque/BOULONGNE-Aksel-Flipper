@@ -15,13 +15,15 @@ public class SelfPaddle : MonoBehaviour
 
     [SerializeField] private GameObject paddle;
 
-    [SerializeField] private int powerLevel = 0;
+    [SerializeField] private int powerLevel = 1;
     [Range(5f,50.0f)] public float strenghtLevel1;
     [Range(5f,50.0f)] public float strenghtLevel2;
     [Range(5f,50.0f)] public float strenghtLevel3;
-    public float strenght = 1;
+    [Range(5f,50.0f)] public float strenght = 1;
     public GameObject point1;
     public GameObject point2;
+
+    [SerializeField] [Range(0, 1f)] private float scaleTime;
     
     private bool timerLancer = false;
     private float timer = 0;
@@ -35,6 +37,7 @@ public class SelfPaddle : MonoBehaviour
         ball = GameObject.FindWithTag("Ball");
         rb = ball.GetComponent<Rigidbody>();
         propulsionItems = ball.GetComponent<RecupItem>();
+        strenghtLevel1 = strenght;
     }
 
     // Update is called once per frame
@@ -54,7 +57,7 @@ public class SelfPaddle : MonoBehaviour
         {
             if (ctx.started)
             {
-                Time.timeScale = 0.3f;
+                Time.timeScale = scaleTime;
                 paddle.SetActive(true);
                 timerLancer = true;
                 canShoot = true;
@@ -66,7 +69,8 @@ public class SelfPaddle : MonoBehaviour
         {
             anim.Play();
             Time.timeScale = 1;
-            powerLevel = 0;
+            powerLevel = 1;
+            strenght = strenghtLevel1;
             timerLancer = false;
             timer = 0;
             canShoot  = false;
@@ -80,13 +84,7 @@ public class SelfPaddle : MonoBehaviour
 
     private void ChangePower()
     {
-        if (timer > 0.5f && powerLevel == 0)
-        {
-            powerLevel++;
-            timer = 0;
-            strenght = strenghtLevel1;
-        }
-        else if (timer > 1.5f && powerLevel == 1)
+        if (timer > 1.5f && powerLevel == 1)
         {
             powerLevel++;
             timer = 0;

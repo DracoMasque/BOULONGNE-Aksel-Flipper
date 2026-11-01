@@ -5,7 +5,7 @@ using UnityEngine;
 public class RecupItem : MonoBehaviour
 {
     public List<GameObject> propultionItems;
-    private Tutorial tuto;
+    [SerializeField] private Tutorial tuto;
 
     private void OnTriggerEnter(Collider other)
     {

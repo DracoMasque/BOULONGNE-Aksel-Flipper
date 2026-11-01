@@ -141,12 +141,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a1492b9be4793047a5ac528fa9bff30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SelfPaddle
+  tuto: {fileID: 0}
   paddle: {fileID: 8963710653357055657}
-  powerLevel: 0
-  strenghtLevel1: 5
-  strenghtLevel2: 8
-  strenghtLevel3: 11
-  strenght: 5
+  powerLevel: 1
+  strenghtLevel2: 12
+  strenghtLevel3: 19
+  strenght: 7
   point1: {fileID: 2397140558263890786}
   point2: {fileID: 3468690842160131181}
 --- !u!1 &8963710653357055657
