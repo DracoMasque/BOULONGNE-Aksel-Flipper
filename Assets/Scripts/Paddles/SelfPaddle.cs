@@ -14,12 +14,13 @@ public class SelfPaddle : MonoBehaviour
     [SerializeField] private Tutorial tuto;
 
     [SerializeField] private GameObject paddle;
+    private Material paddleMaterial;
 
     [SerializeField] private int powerLevel = 1;
     [Range(5f,50.0f)] public float strenghtLevel1;
     [Range(5f,50.0f)] public float strenghtLevel2;
     [Range(5f,50.0f)] public float strenghtLevel3;
-    [Range(5f,50.0f)] public float strenght = 1;
+    [HideInInspector] public float strenght = 1;
     public GameObject point1;
     public GameObject point2;
 
@@ -38,6 +39,7 @@ public class SelfPaddle : MonoBehaviour
         rb = ball.GetComponent<Rigidbody>();
         propulsionItems = ball.GetComponent<RecupItem>();
         strenghtLevel1 = strenght;
+        paddleMaterial = paddle.transform.GetChild(0).GetComponent<MeshRenderer>().material;
     }
 
     // Update is called once per frame
@@ -57,6 +59,7 @@ public class SelfPaddle : MonoBehaviour
         {
             if (ctx.started)
             {
+                paddleMaterial.color = Color.red;
                 Time.timeScale = scaleTime;
                 paddle.SetActive(true);
                 timerLancer = true;
@@ -74,7 +77,7 @@ public class SelfPaddle : MonoBehaviour
             timerLancer = false;
             timer = 0;
             canShoot  = false;
-            if (tuto != null)
+            if (tuto != null && tuto.itemTutorialDone)
             {
                 tuto.ItemTutorialDone();
             }
@@ -87,14 +90,14 @@ public class SelfPaddle : MonoBehaviour
         if (timer > 1.5f && powerLevel == 1)
         {
             powerLevel++;
-            timer = 0;
             strenght = strenghtLevel2;
+            paddleMaterial.color = Color.yellow;
         }
         else if (timer > 2.5f && powerLevel == 2)
         {
             powerLevel++;
-            timer = 0;
             strenght = strenghtLevel3;
+            paddleMaterial.color = Color.green;
         }
     }
 
@@ -106,7 +109,6 @@ public class SelfPaddle : MonoBehaviour
 
     public void PropulceBall()
     {
-        print("Propulce ball");
         Vector3 force;
         force = (point2.transform.position - point1.transform.position).normalized*strenght;
         rb.AddForce(force, ForceMode.Impulse);

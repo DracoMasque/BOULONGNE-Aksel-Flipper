@@ -13,7 +13,7 @@ public class RecupItem : MonoBehaviour
         {
             propultionItems.Add(other.gameObject);
             other.gameObject.SetActive(false);
-            if (tuto != null)
+            if (tuto != null && tuto.itemRecupTextDone)
             {
                 tuto.RecupItemDone();
             }

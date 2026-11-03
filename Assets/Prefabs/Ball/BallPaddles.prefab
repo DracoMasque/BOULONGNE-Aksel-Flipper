@@ -144,11 +144,13 @@ MonoBehaviour:
   tuto: {fileID: 0}
   paddle: {fileID: 8963710653357055657}
   powerLevel: 1
+  strenghtLevel1: 5
   strenghtLevel2: 12
   strenghtLevel3: 19
   strenght: 7
   point1: {fileID: 2397140558263890786}
   point2: {fileID: 3468690842160131181}
+  scaleTime: 0.15
 --- !u!1 &8963710653357055657
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +338,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8629823283714477688, guid: 0219f12f0d58efb4fa5e799f8d4c918b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: ffde95e4557615e42b763921f8d53101, type: 2}
     m_RemovedComponents:
     - {fileID: 7093301827479028375, guid: 0219f12f0d58efb4fa5e799f8d4c918b, type: 3}
     - {fileID: 6545471408105887580, guid: 0219f12f0d58efb4fa5e799f8d4c918b, type: 3}

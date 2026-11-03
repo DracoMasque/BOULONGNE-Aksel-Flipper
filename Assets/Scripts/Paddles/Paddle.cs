@@ -37,7 +37,7 @@ public class Paddle : MonoBehaviour
             jointSpring.targetPosition = originePos;
         }
         hinge.spring = jointSpring;
-        if (tuto != null)
+        if (tuto != null && tuto.paddleInputTutoDone)
         {
             tuto.PaddleInputTutoDone();
         }

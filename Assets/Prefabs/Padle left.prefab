@@ -194,6 +194,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Paddle
   tuto: {fileID: 0}
-  targetPos: 20
+  targetPos: 40
   originePos: 0
   hinge: {fileID: 6545471408105887580}
