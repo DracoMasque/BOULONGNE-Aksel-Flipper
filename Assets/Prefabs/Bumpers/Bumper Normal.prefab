@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7545128724257578194}
   - component: {fileID: 2368548403350988052}
   - component: {fileID: 182758669162043397}
+  - component: {fileID: 2550590298613224863}
   m_Layer: 0
   m_Name: Bumper Normal
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0720524, y: 2.0906942, z: 0.69948}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -126,4 +127,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   strenght: 10
+  animation: {fileID: 0}
   score: 10
+--- !u!111 &2550590298613224863
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4463003105481705619}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 7400000, guid: 62d02f732c394554a8aed4e729f8273d, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 62d02f732c394554a8aed4e729f8273d, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0

@@ -43,13 +43,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _DissolveSlider1: 0
-    - _DissolveSlider2: 0.339
+    - _DissolveSlider2: 0.423
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SmoothStep: 0.283
     m_Colors:
     - _DarkColorColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FireColor: {r: 0, g: 0.41509432, b: 0.0063074124, a: 0.49803922}
+    - _FireColor: {r: 0, g: 13.283018, b: 0.2018372, a: 0.49803922}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &2495131197496322125

@@ -3,6 +3,7 @@ using UnityEngine;
 public class BumperNormal : MonoBehaviour
 {
     [Range(10.0f,50.0f)] public float strenght;
+    public Animation animation;
     public int score = 10;
     
     private void OnCollisionEnter(Collision collision)
@@ -15,5 +16,6 @@ public class BumperNormal : MonoBehaviour
         {
             ScoreManager.instance.AddScore(score);
         }
+        animation.Play();
     }
 }
