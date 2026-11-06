@@ -1,18 +1,21 @@
+using System;
 using UnityEngine;
 
 public class KillZone : MonoBehaviour
 {
-    [SerializeField] private GameManger gameManager;
+    [SerializeField] private GameManager gameManager;
 
     void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManger>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
     void OnTriggerEnter(Collider collision)
     {
         if (collision.tag == "Ball")
         {
-            gameManager.LooseLife();
+            gameManager.SpawnBall();
+            ScoreManager.instance.objectif = MathF.Round(ScoreManager.instance.objectif * 1.5f);
+            ScoreManager.instance.AddScore(0);
         }
     }
 }

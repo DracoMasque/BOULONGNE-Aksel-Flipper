@@ -7,7 +7,8 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
     
     public TextMeshProUGUI scoreText;
-    public int score;
+    public float score;
+    public float objectif = 500;
 
     private void Awake()
     {
@@ -31,7 +32,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "score : " + score;
+            scoreText.text = "Objectif : " + score + "/" + objectif;
         }
     }
 }

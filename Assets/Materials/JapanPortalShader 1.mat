@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PortalShader
+  m_Name: JapanPortalShader 1
   m_Shader: {fileID: -6465566751694194690, guid: 848586345705c5746a2bdbc65198a805, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -55,12 +55,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _DissolveAmount: 2.31
+    - _DissolveAmount: 1.93
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Scale: 4.55
     m_Colors:
-    - _Color: {r: 7.9999995, g: 0, b: 0, a: 1}
+    - _Color: {r: 0.8623532, g: 7.999999, b: 0, a: 1}
     - _Color2: {r: 4, g: 2.5882351, b: 0, a: 1}
     - _OffsetSpeed: {r: 0.22, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
